@@ -2,14 +2,21 @@ var express = require('express');
 var router = express.Router();
 
 const nameList = [
-{'id':1, 'name':'Rahul', 'desc':'First record'},
-{'id':2, 'name':'Prem','desc':'Second record'},
-{'id':50, 'name':'Vijay','desc':'Fiftieth record'}
+{'id':1, 'name':'DevOps', 'def':'DevOps is the combination of cultural philosophies, practices, and tools that increases an organizations ability to deliver applications and services at a high velocity: evolving and improving products at a faster pace than organizations using traditional software development and infrastructure management processes.', 'ref':'https://aws.amazon.com/devops/what-is-devops/'},
+{'id':2, 'name':'Waterfall', 'def':'Waterfall is a project delivery mechanism where tasks are completed in a sequential order to achieve a specific goal.', 'ref':'Coupland, M. 2021, DevOps Adoption Strategies: Principles, Processes, Tools, and Trends / Coupland, Martyn, Packt Publishing, viewed 11 July 2022, <https://discovery.ebsco.com/linkprocessor/plink?id=ae8dea02-45fd-3d96-b3e5-4ab0506facac>.'},
+{'id':3, 'name':'GitHub','def':'Git is a popular open source version control system. It is a web-based hosted service for Git repositories. GitHub allows you to host remote Git repositories, and has a wealth of community-based services that make it ideal for open source projects.', 'ref':'Vadapalli, S. 2018, DevOps: continuous delivery, integration, and deployment with DevOps: dive into the core DevOps strategies / Sricharan Vadapalli, Packt Publishing, viewed 11 July 2022'},
+{'id':4, 'name':'Docker','def':'A Docker container consists of packaging the application and its dependencies all up in a box. It runs as an isolated process on the host operating system, sharing the kernel with another container. It enjoys resource isolation and allocation benefits like VMs, but is much more portable and efficient.','ref':'Vadapalli, S. 2018, DevOps: continuous delivery, integration, and deployment with DevOps: dive into the core DevOps strategies / Sricharan Vadapalli, Packt Publishing, viewed 11 July 2022'},
+{'id':5, 'name':'Continuous Integration','def':'Continuous integration (CI) is the practice of quickly integrating newly developed code with the rest of the application code to be released. This saves time when the application is ready to be released. This process is usually automated and produces a build artifact at the end of the process.','ref':'Coupland, M. 2021, DevOps Adoption Strategies: Principles, Processes, Tools, and Trends / Coupland, Martyn, Packt Publishing, viewed 11 July 2022'},
+{'id':6, 'name':'Continuous Deployment', 'def':'Continuous deployment is one step beyond continuous delivery. Every change that passes through all the stages of your production pipeline is released to your customers. There is no human intervention - a failed test, at this stage, will prevent new releases to production.', 'ref': 'Coupland, M. 2021, DevOps Adoption Strategies : Principles, Processes, Tools, and Trends / Coupland, Martyn, Packt Publishing, viewed 11 July 2022'},
+{'id':7, 'name':'Agile','def':'Development is organized in an iterative way, in small batches called sprints , which are constrained in duration. The main objective is the satisfaction of the customer or user, measured frequently and enriched by collecting feedbacks on a regular basis.','ref':'Caseau, Yves. The Lean Approach to Digital Transformation : From Customer to Code and from Code to Customer, Productivity Press, 2022. ProQuest Ebook Central'},
+{'id':8, 'name':'Kubernetes', 'def': 'Kubernetes is an open source orchestration system for Docker containers. It groups containers into logical units for easy management and discovery, handles scheduling on nodes, and actively manages workloads to ensure their state matches users declared intentions.','ref':'Vadapalli, S. 2018, DevOps: continuous delivery, integration, and deployment with DevOps: dive into the core DevOps strategies / Sricharan Vadapalli, Packt Publishing, viewed 11 July 2022'},
+{'id':9, 'name':'Jenkins', 'def': 'Jenkins is a web-enabled tool used through application or a web server such as Tomcat, for continuous build, deployment, and testing, and is integrated with build tools such as Ant/Maven and the source code repository Git. It also has master and dump slaves.',ref:'Vadapalli, S. 2018, DevOps: continuous delivery, integration, and deployment with DevOps: dive into the core DevOps strategies / Sricharan Vadapalli, Packt Publishing, viewed 11 July 2022'},
+{'id':10, 'name':'Render', 'def': 'Render is a unified cloud to build and run all apps and websites with free TLS certificates, a global CDN, DDoS protection, private networks and auto deploys from Git.', 'ref':'www.render.com'}
 ];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'SIT722', sub:'Software Deployment and Operations', names: nameList});
+  res.render('index', { title: 'SIT722', sub:'Software Deployment and Operations Glossary', names: nameList});
 });
 
 module.exports = router;

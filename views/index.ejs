@@ -2,25 +2,25 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' /> <!--included CSS styling with margins in style.css file-->
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= sub %></p>
     <table>
-      <% names.forEach((name) => { %>
       <tr>
-        <td>
-          <%= name.id %>
-        </td>
-        <td>
-          <%= name.name %>
-        </td>
-        <td>
-          <%= name.desc %>
-        </td>
+        <th><b>Sl. No.</b></th>
+        <th><b>Term</b></th>
+        <th><b>Definition/Description</b></th>
+        <th><b>References</b></th>
       </tr>
-    <% }) %>
+      <% names.forEach((name) => { %>
+        <tr>
+          <td><%= name.id %></td>
+          <td><%= name.name %></td>
+          <td><%= name.def %></td>
+          <td><%= name.ref %></td> 
+      <% }) %>
     </table>
   </body>
 </html>
